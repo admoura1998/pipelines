@@ -45,7 +45,7 @@
                 "type": "exec",
                 "run_if": "passed",
                 "on_cancel": null,
-                "command": "pwd",
+                "command": "zip arquivo.zip *",
                 "arguments":[],
                 "working_directory": "script"
                 },
