@@ -1,0 +1,56 @@
+{
+	"format_version": 1,
+	"group": "grupo",
+	"name": "envia_arquivo",
+	"label_template": "Revision-${COUNT}",
+	"parameters": [],
+	"mingle": {},
+	"tracking_tool": null,
+	"environment_variables": [],
+	"materials": [{
+        "url": "https://github.com/admoura1998/scp_script.git",
+        "branch": "master",
+        "filter": {},
+        "destination": "script",
+        "auto_update": true,
+        "name": "script",
+        "type": "git"
+    }],
+	"lock_behavior": "lockOnFailure",
+	"stages":[{
+        "name": "gerar_artefato",
+        "fetch_materials": true,
+        "never_cleanup_artifacts": false,
+        "clean_working_directory": true,
+        "approval": { "type": "manual" },
+        "environment_variables":[],
+        "jobs": [{
+            "name": "compactar_arquivo",
+            "run_instance_count": null,
+            "environment_variables": [],
+            "timeout": 0,
+            "elastic_profile_id": null,
+            "tabs":[],
+            "resources": [
+                "agent"                
+            ],
+            "artifacts": [{
+                "source": "arquivos.zip",
+                "destination": "",
+                "type": "build"
+            }],
+            "properties": [],
+            "tasks": [
+                {
+                    "type": "exec",
+                    "run_if": "passed",
+                    "on_cancel": null,
+                    "command": "/bin/bash",
+                    "arguments":["-c","echo $DIR"],
+                    "working_directory": ""
+               }             
+               
+            ]            
+        }]
+    }]
+}
