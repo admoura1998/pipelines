@@ -45,15 +45,23 @@
 					"job": "compactar_arquivo",
 					"is_source_a_file": true,
 					"source": "arquivos.zip",
-					"destination": ""
+					"destination": "arquivos"
 				},                			
 				{
 					"type": "exec",
 					"run_if": "passed",
 					"on_cancel": null,
-					"command": "whoami",
-					"arguments": [],
-					"working_directory": ""
+					"command": "/bin/bash",
+					"arguments": ["-c", "unzip -u arquivos.zip"],
+					"working_directory": "arquivos"
+				},
+				{
+					"type": "exec",
+					"run_if": "passed",
+					"on_cancel": null,
+					"command": "/bin/bash",
+					"arguments": ["-c", "scp -i ~/.ssh/id_rsa -v * alvaro@172.19.80.197:/home/alvaro/Área de Trabalho/producao"],
+					"working_directory": "arquivos"
 				}
 			]
 		}]
