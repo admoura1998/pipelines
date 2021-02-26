@@ -45,8 +45,8 @@
                 "type": "exec",
                 "run_if": "passed",
                 "on_cancel": null,
-                "command": "zip arquivo.zip *",
-                "arguments":[],
+                "command": "zip",
+                "arguments":["arquivo.zip", "site.html"],
                 "working_directory": "script"
                 },
                 {
