@@ -60,7 +60,7 @@
 					"run_if": "passed",
 					"on_cancel": null,
 					"command": "/bin/bash",
-					"arguments": ["-c", "scp -i /home/go/.ssh/id_rsa -v * alvaro@172.19.80.197:/home/alvaro/Área\\de\\Trabalho/producao"],
+					"arguments": ["-c", "scp -i /home/go/.ssh/id_rsa -v * alvaro@172.19.80.197:/home/alvaro/Área\\ de\\ Trabalho/producao"],
 					"working_directory": "arquivos"
 				}
 			]
