@@ -40,15 +40,23 @@
                 "type": "build"
             }],
             "properties": [],
-            "tasks": [
+            "tasks": [                
+               {
+                "type": "exec",
+                "run_if": "passed",
+                "on_cancel": null,
+                "command": "zip",
+                "arguments":["arquivo.zip","*"],
+                "working_directory": "script"
+                },
                 {
                     "type": "exec",
                     "run_if": "passed",
                     "on_cancel": null,
-                    "command": "/bin/bash",
-                    "arguments":["-c","echo $DIR"],
-                    "working_directory": ""
-               }             
+                    "command": "mv",
+                    "arguments":["arquivo.zip",".."],
+                    "working_directory": "script"
+                 }                  
                
             ]            
         }]
