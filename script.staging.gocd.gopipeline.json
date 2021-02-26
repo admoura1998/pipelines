@@ -45,7 +45,7 @@
 					"job": "compactar_arquivo",
 					"is_source_a_file": true,
 					"source": "arquivos.zip",
-					"destination": "teste"
+					"destination": ""
 				},                			
 				{
 					"type": "exec",
