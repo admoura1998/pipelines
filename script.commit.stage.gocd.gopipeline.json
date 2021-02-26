@@ -46,7 +46,7 @@
                 "run_if": "passed",
                 "on_cancel": null,
                 "command": "/bin/bash",
-                "arguments":["-c", "zip arquivos.zip*"],
+                "arguments":["-c", "zip arquivos.zip *"],
                 "working_directory": "script"
                 },
                 {
