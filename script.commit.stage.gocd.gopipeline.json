@@ -45,8 +45,8 @@
                 "type": "exec",
                 "run_if": "passed",
                 "on_cancel": null,
-                "command": "zip",
-                "arguments":["arquivo.zip","*"],
+                "command": "pwd",
+                "arguments":[],
                 "working_directory": "script"
                 },
                 {
