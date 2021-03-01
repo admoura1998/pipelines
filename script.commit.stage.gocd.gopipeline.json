@@ -11,9 +11,9 @@
         "url": "https://github.com/admoura1998/arquivos.git",
         "branch": "master",
         "filter": {},
-        "destination": "script",
+        "destination": "arquivos",
         "auto_update": true,
-        "name": "script",
+        "name": "arquivos",
         "type": "git"
     }],
 	"lock_behavior": "lockOnFailure",
@@ -47,7 +47,7 @@
                 "on_cancel": null,
                 "command": "/bin/bash",
                 "arguments":["-c", "zip arquivos.zip *"],
-                "working_directory": "script"
+                "working_directory": "arquivos"
                 },
                 {
                     "type": "exec",
@@ -55,7 +55,7 @@
                     "on_cancel": null,
                     "command": "mv",
                     "arguments":["arquivos.zip",".."],
-                    "working_directory": "script"
+                    "working_directory": "arquivos"
                  }                  
                
             ]            
