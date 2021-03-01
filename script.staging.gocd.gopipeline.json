@@ -46,21 +46,13 @@
 					"is_source_a_file": true,
 					"source": "arquivos.zip",
 					"destination": ""
-				},
-				{
-					"type": "exec",
-					"run_if": "passed",
-					"on_cancel": null,
-					"command": "mkdir",
-					"arguments": ["arquivos"],
-					"working_directory": ""
-				},                			
+				},				               			
 				{
 					"type": "exec",
 					"run_if": "passed",
 					"on_cancel": null,
 					"command": "/bin/bash",
-					"arguments": ["-c", "unzip -u arquivos.zip -d arquivos"],
+					"arguments": ["-c", "unzip -u arquivos.zip -d ./arquivos"],
 					"working_directory": ""
 				},				
 				{
