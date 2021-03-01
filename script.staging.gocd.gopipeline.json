@@ -60,8 +60,8 @@
 					"run_if": "passed",
 					"on_cancel": null,
 					"command": "/bin/bash",
-					"arguments": ["-c", "unzip -u arquivos.zip"],
-					"working_directory": "arquivos"
+					"arguments": ["-c", "unzip -u arquivos.zip -d arquivos"],
+					"working_directory": ""
 				},				
 				{
 					"type": "exec",
