@@ -45,7 +45,7 @@
 					"job": "compactar_arquivo",
 					"is_source_a_file": true,
 					"source": "arquivos.zip",
-					"destination": "arquivos"
+					"destination": ""
 				},                			
 				{
 					"type": "exec",
@@ -54,7 +54,7 @@
 					"command": "/bin/bash",
 					"arguments": ["-c", "unzip -u arquivos.zip"],
 					"working_directory": "arquivos"
-				},
+				},				
 				{
 					"type": "exec",
 					"run_if": "passed",
